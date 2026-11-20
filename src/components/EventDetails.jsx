@@ -129,7 +129,7 @@ import {
           </div>
         </div>
   
-        <div className="text-center mt-6">
+        {/* <div className="text-center mt-6">
           <button
             onClick={downloadCalendar}
             className="inline-flex items-center gap-2 border-2 border-[#7C9473] text-[#7C9473] px-6 py-3 rounded-full font-bold hover:bg-[#7C9473] hover:text-white transition"
@@ -137,7 +137,7 @@ import {
             <Download size={18} />
             Add to Calendar
           </button>
-        </div>
+        </div> */}
   
       </section>
     );
