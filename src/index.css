@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'Nunito', sans-serif;
+  color: #2D3A28;
+  background: #FDFBF7;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #FDFBF7;
+}
+
+h1, h2, h3, .display-font {
+  font-family: 'Fredoka', sans-serif;
+}
+
+::selection {
+  background: #A3B899;
+  color: white;
+}
+
+.leaf-sway {
+  transform-origin: bottom center;
+  animation: sway 4s ease-in-out infinite alternate;
+}
+
+.balloon-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.cloud-float {
+  animation: cloud 18s linear infinite alternate;
+}
+
+@keyframes sway {
+  from { transform: rotate(-5deg); }
+  to { transform: rotate(5deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes cloud {
+  from { transform: translateX(-15px); }
+  to { transform: translateX(25px); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.card {
+  background: white;
+  border: 1px solid #E7E8DC;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(45, 58, 40, 0.06);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #B68A28, #E9CC75, #B68A28);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-title {
+  text-shadow: 2px 3px 0 #DCE6D5;
+}
+
+.btn-primary {
+  background: #7C9473;
+  color: white;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #617D59;
+  transform: translateY(-2px);
+}
+
+input, textarea, select {
+  outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #7C9473 !important;
+  box-shadow: 0 0 0 3px rgba(124,148,115,.13);
+}
+
+.grass {
+  background: linear-gradient(
+    0deg,
+    #7C9473 0%,
+    #A3B899 55%,
+    transparent 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==============================
+   SAFARI ANIMATIONS
+============================== */
+
+@keyframes animalBounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+@keyframes animalWave {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes animalSway {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: .9;
+  }
+  50% {
+    transform: translate3d(45px, 50vh, 0) rotate(180deg);
+  }
+  90% {
+    opacity: .8;
+  }
+  100% {
+    transform: translate3d(-35px, 110vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes grassWave {
+  0%, 100% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: .4;
+    transform: scale(.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animal-bounce {
+  animation: animalBounce 3s ease-in-out infinite;
+}
+
+.animal-wave {
+  animation: animalWave 2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animal-sway {
+  animation: animalSway 3s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.grass-wave {
+  animation: grassWave 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.sparkle-animation {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.petal {
+  position: fixed;
+  top: -10vh;
+  pointer-events: none;
+  z-index: 40;
+  animation: petalFall linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal,
+  .animal-bounce,
+  .animal-wave,
+  .animal-sway,
+  .grass-wave {
+    animation: none !important;
+  }
+}
+
+/* Monkey swinging animation */
+.monkey-swing {
+  transform-origin: 88px 25px;
+  animation: monkeySwing 3s ease-in-out infinite;
+}
+
+@keyframes monkeySwing {
+  0%, 100% {
+    transform: rotate(-8deg);
+  }
+
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+/* Monkey tail movement */
+.monkey-tail {
+  transform-origin: 105px 105px;
+  animation: monkeyTail 2s ease-in-out infinite alternate;
+}
+
+@keyframes monkeyTail {
+  from {
+    transform: rotate(-12deg);
+  }
+
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+/* Little legs swinging */
+.monkey-legs {
+  transform-origin: 88px 130px;
+  animation: monkeyLegs 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes monkeyLegs {
+  from {
+    transform: rotate(-8deg);
+  }
+
+  to {
+    transform: rotate(8deg);
+  }
+}
+
+/* Sparkle */
+.monkey-sparkle {
+  animation: monkeySparkle 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes monkeySparkle {
+  0%, 100% {
+    opacity: .3;
+    transform: scale(.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+
+/* Sun glowing behind the clouds */
+.sun-glow {
+  animation: sunGlow 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes sunGlow {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    filter: drop-shadow(0 0 5px rgba(255, 190, 50, 0.4));
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.08);
+    filter: drop-shadow(0 0 15px rgba(255, 190, 50, 0.8));
+  }
+}
+
+/* Bird flying across the sky */
+/* .bird-fly {
+  animation: birdFly 12s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes birdFly {
+  0% {
+    transform: translate(-50px, 15px) rotate(-8deg);
+  }
+
+  25% {
+    transform: translate(25vw, -15px) rotate(5deg);
+  }
+
+  50% {
+    transform: translate(50vw, 5px) rotate(-5deg);
+  }
+
+  75% {
+    transform: translate(75vw, -20px) rotate(8deg);
+  }
+
+  100% {
+    transform: translate(110vw, 10px) rotate(-5deg);
+  }
+} */
+
+@media (prefers-reduced-motion: reduce) {
+  .sun-glow,
+  .bird-fly {
+    animation: none;
+  }
+}
+
+
+
+
+/* Welcome screen entrance */
+.welcome-screen {
+  animation: welcomeFadeIn 0.8s ease-out both;
+}
+
+@keyframes welcomeFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opening screen exit */
+.welcome-exit {
+  animation: welcomeExit 0.9s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes welcomeExit {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+}
+
+/* Main invitation reveal */
+.invitation-reveal {
+  animation: invitationReveal 1.1s ease-out both;
+}
+
+@keyframes invitationReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title animation */
+.welcome-title {
+  animation: titlePop 1s ease-out both;
+}
+
+@keyframes titlePop {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.85);
+  }
+
+  70% {
+    transform: translateY(-5px) scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Monkey entrance */
+.welcome-monkey {
+  animation: monkeyWelcome 2.5s ease-in-out infinite;
+}
+
+@keyframes monkeyWelcome {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+/* Floating balloons */
+.welcome-balloon {
+  animation: welcomeBalloon 3s ease-in-out infinite;
+}
+
+.welcome-balloon-delayed {
+  animation: welcomeBalloon 3.5s ease-in-out infinite 0.7s;
+}
+
+@keyframes welcomeBalloon {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(5deg);
+  }
+}
+
+/* Floating stars */
+.floating-star {
+  animation: starFloat 2s ease-in-out infinite;
+}
+
+.floating-star-delayed {
+  animation: starFloat 2.5s ease-in-out infinite 0.8s;
+}
+
+@keyframes starFloat {
+  0%, 100% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(-12px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Bottom safari animals */
+.welcome-animal {
+  animation: animalWelcome 2s ease-in-out infinite;
+}
+
+.welcome-animal-delayed {
+  animation: animalWelcome 2.3s ease-in-out infinite 0.5s;
+}
+
+@keyframes animalWelcome {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Moving clouds */
+.welcome-cloud {
+  animation: welcomeCloud 7s ease-in-out infinite alternate;
+}
+
+@keyframes welcomeCloud {
+  from {
+    transform: translateX(-8px);
+  }
+
+  to {
+    transform: translateX(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-screen,
+  .welcome-exit,
+  .invitation-reveal,
+  .welcome-title,
+  .welcome-monkey,
+  .welcome-balloon,
+  .welcome-balloon-delayed,
+  .floating-star,
+  .floating-star-delayed,
+  .welcome-animal,
+  .welcome-animal-delayed,
+  .welcome-cloud {
+    animation: none !important;
+  }
+}

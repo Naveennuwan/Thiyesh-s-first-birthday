@@ -1,0 +1,36 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="24" fill="#FDF3D7"/>
+
+  <!-- Lion mane -->
+  <circle cx="50" cy="51" r="39" fill="#D69B45"/>
+
+  <!-- Ears -->
+  <circle cx="23" cy="28" r="12" fill="#D69B45"/>
+  <circle cx="77" cy="28" r="12" fill="#D69B45"/>
+  <circle cx="23" cy="28" r="6" fill="#F5D8B0"/>
+  <circle cx="77" cy="28" r="6" fill="#F5D8B0"/>
+
+  <!-- Face -->
+  <circle cx="50" cy="51" r="29" fill="#F5D8B0"/>
+
+  <!-- Eyes -->
+  <circle cx="39" cy="45" r="3.5" fill="#2D3A28"/>
+  <circle cx="61" cy="45" r="3.5" fill="#2D3A28"/>
+
+  <!-- Nose -->
+  <path d="M44 55 Q50 50 56 55 Q50 63 44 55" fill="#745239"/>
+
+  <!-- Smile -->
+  <path d="M50 62 Q43 70 37 63 M50 62 Q57 70 63 63"
+        stroke="#745239" stroke-width="2.5" fill="none"
+        stroke-linecap="round"/>
+
+  <!-- Cheeks -->
+  <circle cx="30" cy="57" r="5" fill="#EBAA9A" opacity=".7"/>
+  <circle cx="70" cy="57" r="5" fill="#EBAA9A" opacity=".7"/>
+
+  <!-- Small crown -->
+  <path d="M38 19 L35 8 L45 14 L50 5 L55 14 L65 8 L62 19 Z"
+        fill="#E8C66A" stroke="#A9782E" stroke-width="1.5"/>
+</svg>
