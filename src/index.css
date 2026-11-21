@@ -97,9 +97,8 @@ h1, h2, h3, .display-font {
 }
 
 .gold-text {
-  background: linear-gradient(135deg, #B9A5D6, #E6D9F2, #B9A5D6);
+  background: linear-gradient(135deg, #B68A28, #E9CC75, #B68A28);
   -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
 }
 
